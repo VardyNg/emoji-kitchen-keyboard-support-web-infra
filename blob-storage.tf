@@ -13,7 +13,7 @@ resource "azurerm_storage_account" "web-storage-account" {
 resource "azurerm_storage_container" "web-storage-container" {
   name                  = "$web"
   storage_account_name  = azurerm_storage_account.web-storage-account.name
-  container_access_type = "private"
+  container_access_type = "blob"
 }
 
 resource "azurerm_storage_blob" "web-storage-blob" {
