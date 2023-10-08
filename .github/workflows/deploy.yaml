@@ -25,10 +25,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: azure/login@v1
-      #   run: |
-      #     az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
