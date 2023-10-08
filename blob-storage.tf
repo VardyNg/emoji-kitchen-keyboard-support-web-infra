@@ -22,3 +22,15 @@ resource "azurerm_storage_blob" "web-storage-blob" {
   storage_container_name = azurerm_storage_container.web-storage-container.name
   type                   = "Block"
 }
+
+resource "azurerm_storage_container" "tfstate-storage-container" {
+  name                  = "tfstate"
+  storage_account_name  = azurerm_storage_account.web-storage-account.name
+  container_access_type = "blob"
+}
+resource "azurerm_storage_blob" "tfstate" {
+  name                   = "${var.app-name}tfstate"
+  storage_account_name   = azurerm_storage_account.web-storage-account.name
+  storage_container_name = azurerm_storage_container.tfstate-storage-container.name
+  type                   = "Block"
+}
