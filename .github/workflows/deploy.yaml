@@ -17,14 +17,17 @@ jobs:
       TF_VAR_cloudflare_zone_id: ${{ secrets.TF_VAR_CLOUDFLARE_ZONE_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       TF_VAR_web_github_pat: ${{ secrets.TF_VAR_WEB_GITHUB_PAT }}
+      AZ_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
+      AZ_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
+      AZ_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: azure/login@v1
+        run: |
+          az login --service-principal -u $AZ_CLIENT_ID -p $AZ_CLIENT_SECRET --tenant $AZ_TENANT_ID
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
