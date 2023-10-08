@@ -16,3 +16,8 @@ resource "azurerm_cdn_endpoint" "default" {
     host_name = azurerm_storage_account.web-storage-account.primary_web_host
   }
 }
+resource "azurerm_cdn_endpoint_custom_domain" "default" {
+  name            = "${var.app-name}-cdn-custom-domain"
+  cdn_endpoint_id = azurerm_cdn_endpoint.default.id
+  host_name       = local.fqdn
+}
