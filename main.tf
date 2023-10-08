@@ -8,6 +8,10 @@ terraform {
       source = "microsoft/azuredevops"
       version = "0.9.1"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.0"
+    }
   }
 }
 
