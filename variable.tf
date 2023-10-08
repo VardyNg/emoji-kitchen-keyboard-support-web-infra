@@ -13,3 +13,7 @@ variable "web-github-url" {
 variable "web_github_pat" {
   default = ""
 }
+
+variable "cloudflare_zone_id" {
+  default = ""
+}
