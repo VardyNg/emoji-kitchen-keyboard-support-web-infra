@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "web-storage-account" {
 }
 
 resource "azurerm_storage_container" "web-storage-container" {
-  name                  = "${var.app-name}sc"
+  name                  = "$web"
   storage_account_name  = azurerm_storage_account.web-storage-account.name
   container_access_type = "private"
 }
