@@ -22,3 +22,7 @@ provider "azurerm" {
 provider "azuredevops" {
   # Configuration options
 }
+
+provider "cloudflare" {
+  
+}
