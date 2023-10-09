@@ -3,6 +3,7 @@
 [![Deploy website](https://github.com/VardyNg/emoji-kitchen-keyboard-support-web/actions/workflows/deploy.yaml/badge.svg)](https://github.com/VardyNg/emoji-kitchen-keyboard-support-web/actions/workflows/deploy.yaml)
 # Emoji Kitchen Keyboard Support Web Infrastructure-as-Code (IaC) repo
 This repo contains the infrastructure for the web component of the [Emoji Kitchen keyboard support page](https://emojikitchenkeyboard.vardyng.com).
+![architecture diagram](./doc//architecture.png)
 
 For the source code of the support page, please refer to [this repo](https://github.com/VardyNg/emoji-kitchen-keyboard-support-web)
 ## Setup permission / credentials
