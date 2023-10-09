@@ -19,6 +19,7 @@ terraform {
     storage_account_name = "emojikitchenkeyboardsa"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
+    subscription_id      = var.subscription_id
   }
 }
 
