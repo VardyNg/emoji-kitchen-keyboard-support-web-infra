@@ -34,10 +34,10 @@ jobs:
 
       - name: Create backend.config file
         run: |
-          echo 'resource_group_name = "${{ env.TF_VAR_app_name }}"'  > backend.config
-          echo 'storage_account_name = "${{ env.TF_VAR_app_name }}sa"'         >> backend.config
           echo 'container_name       = "tfstate"'                   >> backend.conf
           echo 'key                  = "terraform.tfstate"'         >> backend.conf
+          echo 'resource_group_name = "${{ env.TF_VAR_app_name }}"'  > backend.config
+          echo 'storage_account_name = "${{ env.TF_VAR_app_name }}sa"'         >> backend.config
           echo 'subscription_id      = "${{ env.ARM_SUBSCRIPTION_ID }}"'      >> backend.conf
 
           cat backend.conf
