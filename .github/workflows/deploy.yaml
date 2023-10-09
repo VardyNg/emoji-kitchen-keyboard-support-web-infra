@@ -31,10 +31,15 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.1.7
-      - name: Create backend config
+
+      - name: Set environment variables
         run: |
-          echo 'resource_group_name  = "${TF_VAR_app_name}"'    > backend.conf
-          echo 'storage_account_name = "${TF_VAR_app_name}sa"'  >> backend.conf
+          echo "SA_NAME=\${{ env.TF_VAR_app_name }}sa" >> $GITHUB_ENV
+
+      - name: Create backend.config file
+        run: |
+          echo "resource_group_name = \${{ env.TF_VAR_app_name }}" > backend.config
+          echo "storage_account_name = \${{ env.SA_NAME }}" >> backend.config
           echo 'container_name       = "tfstate"'                 >> backend.conf
           echo 'key                  = "terraform.tfstate"'       >> backend.conf
           echo 'subscription_id      = "$ARM_SUBSCRIPTION_ID"'    >> backend.conf
