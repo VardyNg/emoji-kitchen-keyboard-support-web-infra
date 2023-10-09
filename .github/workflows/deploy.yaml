@@ -48,7 +48,10 @@ jobs:
             -input=false \
             -backend-config=backend.conf
 
-      - name: Deploy Terraform
-        run: terraform plan
-        # run: terraform apply -auto-approve
+      - name: Terraform Plan
+        run: terraform plan -out=tfplan -input=false
+
+      - name: Terraform Apply
+        run: terraform apply -input=false -auto-approve tfplan
+        
 
