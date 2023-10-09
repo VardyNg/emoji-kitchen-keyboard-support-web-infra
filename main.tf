@@ -14,7 +14,12 @@ terraform {
     }
   }
 
-  backend "azurerm" {
+  backend "azurerm" {}
+}
+
+data "terraform_remote_state" "state" {
+  backend = "azurerm"
+  config {
     resource_group_name  = "emojikitchenkeyboard"
     storage_account_name = "emojikitchenkeyboardsa"
     container_name       = "tfstate"
