@@ -1,9 +1,12 @@
 <mxfile host="65bd71144e">
     <diagram id="_S_NFnRed-gRtvTRUoCg" name="Page-1">
-        <mxGraphModel dx="977" dy="1157" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1257" dy="1863" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="66" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-70" y="-60" width="1280" height="850" as="geometry"/>
+                </mxCell>
                 <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="200" y="190" width="920" height="530" as="geometry"/>
                 </mxCell>
@@ -99,7 +102,7 @@
                 <mxCell id="54" value="Azure DevOps &lt;br&gt;Service Endpoint" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/devops/Azure_DevOps.svg;dashed=1;labelBackgroundColor=#FFFFFF;strokeColor=default;fontColor=#000000;fillColor=none;" parent="53" vertex="1">
                     <mxGeometry x="43" y="37" width="64" height="64" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;strokeWidth=2;" edge="1" parent="53" source="56" target="54">
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;strokeWidth=2;" parent="53" source="56" target="54" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="56" value="build definition" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud_services_configuration_file;pointerEvents=1;dashed=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;" parent="53" vertex="1">
@@ -108,7 +111,7 @@
                 <mxCell id="52" value="Azure DevOps Project&lt;br&gt;" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Azure_DevOps.svg;dashed=1;labelBackgroundColor=#FFFFFF;strokeColor=default;fontColor=#000000;fillColor=none;" parent="53" vertex="1">
                     <mxGeometry x="130" y="190" width="50" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;strokeWidth=2;" edge="1" parent="4" target="29">
+                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;strokeWidth=2;" parent="4" target="29" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="760" y="150" as="sourcePoint"/>
                         <Array as="points">
@@ -118,16 +121,15 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="58" value="build and deploy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="57">
+                <mxCell id="58" value="build and deploy" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="57" vertex="1" connectable="0">
                     <mxGeometry x="-0.1346" y="3" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="48" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontColor=#000000;" parent="1" source="47" target="42" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="47" value="Cloudflare record" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd5VtIzrkHaT1ENisgV_H2Z5NOlUObGPH2EENZ4yAuwA&amp;s;" parent="1" vertex="1">
-                    <mxGeometry y="540" width="121.42" height="55" as="geometry"/>
+                <mxCell id="48" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontColor=#000000;" parent="1" source="68" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="111.72000000000003" y="566.1149999999998" as="sourcePoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="49" value="frontend repo" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;labelBackgroundColor=#FFFFFF;strokeColor=default;fontColor=#000000;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="763" y="20" width="64" height="64" as="geometry"/>
@@ -135,29 +137,32 @@
                 <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontColor=#000000;" parent="1" source="54" target="49" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="64" value="access source code" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="55">
+                <mxCell id="64" value="access source code" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="55" vertex="1" connectable="0">
                     <mxGeometry x="0.2104" y="-4" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="60" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="1" source="59" target="28">
+                <mxCell id="60" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" parent="1" source="59" target="28" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="update" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="60">
+                <mxCell id="61" value="update" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="60" vertex="1" connectable="0">
                     <mxGeometry x="-0.3166" y="1" relative="1" as="geometry">
                         <mxPoint y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="59" target="3">
+                <mxCell id="62" style="edgeStyle=orthogonalEdgeStyle;jumpStyle=arc;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" parent="1" source="59" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="provision / modify" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="62">
+                <mxCell id="63" value="provision / modify" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="62" vertex="1" connectable="0">
                     <mxGeometry x="0.2042" y="1" relative="1" as="geometry">
                         <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="59" value="IaC repo" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;labelBackgroundColor=#FFFFFF;strokeColor=default;fontColor=#000000;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="59" value="IaC repo" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;labelBackgroundColor=#FFFFFF;strokeColor=default;fontColor=#000000;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="347.69" y="20" width="64" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="Cloudflare record" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/networking/DNS_Zones.svg;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="535.36" width="64" height="64" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
