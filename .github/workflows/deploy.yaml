@@ -33,11 +33,14 @@ jobs:
           terraform_version: 1.1.7
       - name: Create backend config
         run: |
-          echo 'resource_group_name  = "$TF_VAR_app_name"'    > backend.conf
+          echo 'resource_group_name  = "${TF_VAR_app_name}"'    > backend.conf
           echo 'storage_account_name = "${TF_VAR_app_name}sa"'  >> backend.conf
           echo 'container_name       = "tfstate"'                 >> backend.conf
           echo 'key                  = "terraform.tfstate"'       >> backend.conf
           echo 'subscription_id      = "$ARM_SUBSCRIPTION_ID"'    >> backend.conf
+
+          cat backend.conf
+
       - name: Initialize Terraform
         run: |
           terraform init \
