@@ -2,7 +2,7 @@ resource "azurerm_cdn_profile" "default" {
   name                = "${var.app_name}-cdn"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
-  sku                 = "Standard_Verizon"
+  sku                 = "Standard_Microsoft"
 }
 
 resource "azurerm_cdn_endpoint" "default" {
