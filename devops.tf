@@ -1,9 +1,9 @@
 resource "azuredevops_project" "web" {
-  name               = "${var.app-name}-project"
+  name               = "${var.app_name}-project"
   visibility         = "private"
   version_control    = "Git"
   work_item_template = "Agile"
-  description        = "Project for ${var.app-name}"
+  description        = "Project for ${var.app_name}"
   features = {
     "testplans" = "disabled"
     "artifacts" = "disabled"

@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "default" {
-  name     = var.app-name
+  name     = var.app_name
   location = var.rg-location
 }

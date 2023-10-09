@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "web-storage-account" {
-  name                     = "${var.app-name}sa"
+  name                     = "${var.app_name}sa"
   resource_group_name      = azurerm_resource_group.default.name
   location                 = azurerm_resource_group.default.location
   account_tier             = "Standard"
@@ -17,7 +17,7 @@ resource "azurerm_storage_container" "web-storage-container" {
 }
 
 resource "azurerm_storage_blob" "web-storage-blob" {
-  name                   = "${var.app-name}sb"
+  name                   = "${var.app_name}sb"
   storage_account_name   = azurerm_storage_account.web-storage-account.name
   storage_container_name = azurerm_storage_container.web-storage-container.name
   type                   = "Block"
@@ -29,7 +29,7 @@ resource "azurerm_storage_container" "tfstate-storage-container" {
   container_access_type = "blob"
 }
 resource "azurerm_storage_blob" "tfstate" {
-  name                   = "${var.app-name}tfstate"
+  name                   = "${var.app_name}tfstate"
   storage_account_name   = azurerm_storage_account.web-storage-account.name
   storage_container_name = azurerm_storage_container.tfstate-storage-container.name
   type                   = "Block"

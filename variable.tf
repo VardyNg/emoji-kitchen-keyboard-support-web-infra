@@ -1,4 +1,4 @@
-variable "app-name" {
+variable "app_name" {
   default = "my-app"
 }
 
