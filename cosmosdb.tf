@@ -45,7 +45,7 @@ resource "azurerm_cosmosdb_sql_container" "default" {
   name                  = "${local.cosmosdb_account_name}-container}"
   resource_group_name   = azurerm_resource_group.default.name
   account_name          = azurerm_cosmosdb_account.form.name
-  database_name         = azurerm_cosmosdb_sql_database.default.database_name
+  database_name         = azurerm_cosmosdb_sql_database.default.name
   partition_key_path    = "/definition/id"
   partition_key_version = 1
   autoscale_settings {
