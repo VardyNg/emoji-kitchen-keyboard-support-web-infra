@@ -37,7 +37,7 @@ resource "azurerm_cosmosdb_sql_database" "default" {
   resource_group_name = azurerm_resource_group.default.name
   account_name        = azurerm_cosmosdb_account.form.name
   autoscale_settings {
-    max_throughput = 400
+    max_throughput = 1000
   }
 }
 
@@ -49,7 +49,7 @@ resource "azurerm_cosmosdb_sql_container" "default" {
   partition_key_path    = "/definition/id"
   partition_key_version = 1
   autoscale_settings {
-    max_throughput = 400
+    max_throughput = 1000
   }
 
   indexing_policy {
