@@ -33,7 +33,7 @@ jobs:
       - name: Initialize Terraform
         run: |
           terraform init \
-            -backend-config="subscription_id=$ARM_SUBSCRIPTION_ID" \
+            -backend-config="subscription_id=$ARM_SUBSCRIPTION_ID"
 
       - name: Deploy Terraform
         run: terraform plan
