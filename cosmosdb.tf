@@ -31,3 +31,44 @@ resource "azurerm_cosmosdb_account" "form" {
     azurerm_resource_group.default
   ]
 }
+
+resource "azurerm_cosmosdb_sql_database" "default" {
+  name                = "${local.cosmosdb_account_name}-database}"
+  resource_group_name = azurerm_resource_group.default.name
+  account_name        = azurerm_cosmosdb_account.form.name
+  autoscale_settings {
+    max_throughput = 400
+  }
+}
+
+resource "azurerm_cosmosdb_sql_container" "default" {
+  name                  = "${local.cosmosdb_account_name}-container}"
+  resource_group_name   = azurerm_resource_group.default.name
+  account_name          = azurerm_cosmosdb_account.form.name
+  database_name         = azurerm_cosmosdb_sql_database.default.database_name
+  partition_key_path    = "/definition/id"
+  partition_key_version = 1
+  autoscale_settings {
+    max_throughput = 400
+  }
+
+  indexing_policy {
+    indexing_mode = "consistent"
+
+    included_path {
+      path = "/*"
+    }
+
+    included_path {
+      path = "/included/?"
+    }
+
+    excluded_path {
+      path = "/excluded/?"
+    }
+  }
+
+  unique_key {
+    paths = ["/definition/idlong", "/definition/idshort"]
+  }
+}
