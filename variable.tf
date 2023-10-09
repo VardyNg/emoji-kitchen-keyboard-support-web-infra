@@ -2,7 +2,7 @@ variable "app_name" {
   default = "my-app"
 }
 
-variable "rg-location" {
+variable "rg_location" {
   default = "West Europe"
 }
 
