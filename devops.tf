@@ -30,7 +30,7 @@ resource "azuredevops_build_definition" "web-build" {
 
   repository {
     repo_type   = "GitHub"
-    repo_id     = var.web-github-url
+    repo_id     = "VardyNg/emoji-kitchen-keyboard-support-web"
     yml_path    = "azure-pipelines.yml"
     branch_name = "prod"
     service_connection_id = azuredevops_serviceendpoint_github.web-repo.id
