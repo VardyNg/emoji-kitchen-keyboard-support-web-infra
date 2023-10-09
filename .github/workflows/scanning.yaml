@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: tfsec
-        uses: tfsec/tfsec-sarif-action@latest
+        uses: tfsec/tfsec-sarif-action
         with:
           sarif_file: tfsec.sarif         
 
