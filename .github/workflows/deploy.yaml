@@ -38,17 +38,18 @@ jobs:
 
       - name: Create backend.config file
         run: |
-          echo "resource_group_name = \${{ env.TF_VAR_app_name }}" > backend.config
-          echo "storage_account_name = \${{ env.SA_NAME }}" >> backend.config
-          echo 'container_name       = "tfstate"'                 >> backend.conf
-          echo 'key                  = "terraform.tfstate"'       >> backend.conf
-          echo 'subscription_id      = "$ARM_SUBSCRIPTION_ID"'    >> backend.conf
+          echo "resource_group_name = \${{ env.TF_VAR_app_name }}"  > backend.config
+          echo "storage_account_name = \${{ env.SA_NAME }}"         >> backend.config
+          echo 'container_name       = "tfstate"'                   >> backend.conf
+          echo 'key                  = "terraform.tfstate"'         >> backend.conf
+          echo 'subscription_id      = "$ARM_SUBSCRIPTION_ID"'      >> backend.conf
 
           cat backend.conf
 
       - name: Initialize Terraform
         run: |
           terraform init \
+            -input=false \
             -backend-config=backend.conf
 
       - name: Deploy Terraform
