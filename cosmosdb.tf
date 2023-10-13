@@ -33,7 +33,7 @@ resource "azurerm_cosmosdb_account" "form" {
 }
 
 resource "azurerm_cosmosdb_sql_database" "default" {
-  name                = "${local.cosmosdb_account_name}-database}"
+  name                = "${local.cosmosdb_account_name}-database"
   resource_group_name = azurerm_resource_group.default.name
   account_name        = azurerm_cosmosdb_account.form.name
   autoscale_settings {
@@ -42,7 +42,7 @@ resource "azurerm_cosmosdb_sql_database" "default" {
 }
 
 resource "azurerm_cosmosdb_sql_container" "default" {
-  name                  = "${local.cosmosdb_account_name}-container}"
+  name                  = "${local.cosmosdb_account_name}-container"
   resource_group_name   = azurerm_resource_group.default.name
   account_name          = azurerm_cosmosdb_account.form.name
   database_name         = azurerm_cosmosdb_sql_database.default.name
