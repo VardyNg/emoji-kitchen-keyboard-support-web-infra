@@ -27,6 +27,11 @@ resource "azurerm_cosmosdb_account" "form" {
     max_interval_in_seconds = 300
     max_staleness_prefix    = 100000
   }
+
+  capabilities {
+    name = "EnableServerless"
+  }
+
   depends_on = [
     azurerm_resource_group.default
   ]
@@ -48,6 +53,7 @@ resource "azurerm_cosmosdb_sql_container" "default" {
   database_name         = azurerm_cosmosdb_sql_database.default.name
   partition_key_path    = "/definition/id"
   partition_key_version = 1
+  
   autoscale_settings {
     max_throughput = 1000
   }
