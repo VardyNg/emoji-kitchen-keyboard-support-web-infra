@@ -51,10 +51,6 @@ resource "azurerm_cosmosdb_sql_container" "default" {
   partition_key_path    = "/definition/id"
   partition_key_version = 1
 
-  autoscale_settings {
-    max_throughput = 1000
-  }
-
   indexing_policy {
     indexing_mode = "consistent"
 
