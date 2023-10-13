@@ -41,9 +41,6 @@ resource "azurerm_cosmosdb_sql_database" "default" {
   name                = "${local.cosmosdb_account_name}-database"
   resource_group_name = azurerm_resource_group.default.name
   account_name        = azurerm_cosmosdb_account.form.name
-  autoscale_settings {
-    max_throughput = 1000
-  }
 }
 
 resource "azurerm_cosmosdb_sql_container" "default" {
@@ -53,7 +50,7 @@ resource "azurerm_cosmosdb_sql_container" "default" {
   database_name         = azurerm_cosmosdb_sql_database.default.name
   partition_key_path    = "/definition/id"
   partition_key_version = 1
-  
+
   autoscale_settings {
     max_throughput = 1000
   }
