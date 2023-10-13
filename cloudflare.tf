@@ -3,6 +3,6 @@ resource "cloudflare_record" "default" {
   name    = local.hostname
   value   = azurerm_cdn_endpoint.default.fqdn
   type    = "CNAME"
-  ttl     = 3600
+  ttl     = 1
   proxied = true
 }
