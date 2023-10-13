@@ -11,6 +11,7 @@ resource "azurerm_cdn_endpoint" "default" {
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
   optimization_type   = "GeneralWebDelivery"
+  origin_host_header = azurerm_storage_account.web-storage-account.primary_web_host
   origin {
     name      = var.app_name
     host_name = azurerm_storage_account.web-storage-account.primary_web_host
