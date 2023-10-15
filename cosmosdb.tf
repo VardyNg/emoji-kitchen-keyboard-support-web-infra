@@ -66,8 +66,4 @@ resource "azurerm_cosmosdb_sql_container" "default" {
       path = "/excluded/?"
     }
   }
-
-  unique_key {
-    paths = ["/definition/idlong", "/definition/idshort"]
-  }
 }
