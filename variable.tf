@@ -13,3 +13,8 @@ variable "web_github_pat" {
 variable "cloudflare_zone_id" {
   default = ""
 }
+
+variable "acs_data_location" {
+  description = "The location of the Azure Communication Service."
+  default = "United States"
+}

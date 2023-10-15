@@ -19,6 +19,7 @@ jobs:
       TF_VAR_web_github_pat: ${{ secrets.TF_VAR_WEB_GITHUB_PAT }}
       TF_VAR_app_name: ${{ secrets.APP_NAME }}
       TF_VAR_rg_location: ${{ secrets.RESOURCE_GROUP_LOCATION }}
+      TF_VAR_acs_data_location: ${{ secrets.TF_VAR_acs_data_location }}
       ARM_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
       ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
